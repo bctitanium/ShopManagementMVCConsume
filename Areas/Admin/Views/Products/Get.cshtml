@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ShopManagementMVCConsume.Areas.Admin.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Get</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayName("Id")</th>
+            <th>@Html.DisplayName("StoreId")</th>
+            <th>@Html.DisplayName("ProductName")</th>
+            <th>@Html.DisplayName("ProductDescription")</th>
+            <th>@Html.DisplayName("BuyPrice")</th>
+            <th>@Html.DisplayName("SellPrice")</th>
+            <th>@Html.DisplayName("Quantity")</th>
+            <th>@Html.DisplayName("ImageFile")</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                <td>@row.Id</td>
+                <td>@row.StoreId</td>
+                <td>@row.ProductName</td>
+                <td>@row.ProductDescription</td>
+                <td>@row.BuyPrice</td>
+                <td>@row.SellPrice</td>
+                <td>@row.Quantity</td>
+                <td>@row.ImageFile</td>
+            </tr>
+        }
+    </tbody>
+</table>
