@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using ShopManagementMVCConsume;
 using ShopManagementMVCConsume.Areas.Admin.Models;
-using System.Net.Http.Headers;
 
 namespace ShopManagementMVCConsume.Areas.Admin.Controllers
 {
@@ -16,10 +14,10 @@ namespace ShopManagementMVCConsume.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        // GET: Admin/Products
+        // GET: Admin/Brand
         public async Task<IActionResult> Get()
         {
-            HttpResponseMessage response = await GloblaVariables.ResponseAsync("Brand");
+            HttpResponseMessage response = await GloblaVariables.GetResponseAsync("Brand");
 
             IEnumerable<Brand> brand = new List<Brand>();
 

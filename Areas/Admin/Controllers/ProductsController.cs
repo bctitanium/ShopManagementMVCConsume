@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using ShopManagementMVCConsume;
 using ShopManagementMVCConsume.Areas.Admin.Models;
-using System.Net.Http.Headers;
 
 namespace Shoppppp.Areas.Admin.Controllers
 {
@@ -19,7 +18,7 @@ namespace Shoppppp.Areas.Admin.Controllers
         // GET: Admin/Products
         public async Task<IActionResult> Get()
         {
-            HttpResponseMessage response = await GloblaVariables.ResponseAsync("Product");
+            HttpResponseMessage response = await GloblaVariables.GetResponseAsync("Product");
 
             IEnumerable<Product> products = new List<Product>();
 
@@ -36,13 +35,7 @@ namespace Shoppppp.Areas.Admin.Controllers
 
         public async Task<IActionResult> Insert(Product product)
         {
-            HttpClient Client = new HttpClient();
-
-            Client.BaseAddress = new Uri("https://localhost:44355/");
-            Client.DefaultRequestHeaders.Accept.Clear();
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = await Client.PostAsJsonAsync("api/Product", product);
+            HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Product", product);
 
             if (response.IsSuccessStatusCode)
             {
