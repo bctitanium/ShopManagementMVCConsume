@@ -13,6 +13,7 @@ namespace ShopManagementMVCConsume
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             var getClient = await Client.GetAsync(str, CancellationToken.None);
+
             return getClient;
         }
 

@@ -36,37 +36,17 @@ namespace Shoppppp.Areas.Admin.Controllers
 
         public async Task<IActionResult> Insert(Product product)
         {
-            Product obj = new Product()
+            HttpClient Client = new HttpClient();
+
+            Client.BaseAddress = new Uri("https://localhost:44355/");
+            Client.DefaultRequestHeaders.Accept.Clear();
+            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpResponseMessage response = await Client.PostAsJsonAsync("api/Product", product);
+
+            if (response.IsSuccessStatusCode)
             {
-                Id = product.Id,
-                StoreId = product.StoreId,
-                ProductName = product.ProductName,
-                ProductDescription = product.ProductDescription,
-                BuyPrice = product.BuyPrice,
-                SellPrice = product.SellPrice,
-                Quantity = product.Quantity,
-                ImageFile = product.ImageFile
-            };
-
-            if (product.ProductName != null)
-            {
-                //HttpResponseMessage response = await GloblaVariables.ResponseAsync<Product>("Insert", product);
-
-                using (var Client = new HttpClient())
-                {
-                    //HttpClient Client = new HttpClient();
-
-                    Client.BaseAddress = new Uri("https://localhost:44355/api/");
-                    Client.DefaultRequestHeaders.Accept.Clear();
-                    Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                    HttpResponseMessage response = await Client.PostAsJsonAsync<Product>("Create", obj);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        return RedirectToAction("Get", "Products");
-                    }
-                }                
+                return RedirectToAction("Get", "Products");
             }
 
             return View();
