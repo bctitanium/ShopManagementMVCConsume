@@ -31,5 +31,17 @@ namespace ShopManagementMVCConsume.Areas.Admin.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> Insert(Category category)
+        {
+            HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Category", category);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Get", "Category");
+            }
+
+            return View();
+        }
     }
 }

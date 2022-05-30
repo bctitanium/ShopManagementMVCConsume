@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 namespace ShopManagementMVCConsume.Areas.Admin.Models
 {
-    public class User : IdentityUser
+    public class User
     {
+        public string id { get; set; } = string.Empty;
         public string Guid { get; set; } = System.Guid.NewGuid().ToString();
         public string FullName { get; set; } = string.Empty;
         public string Gender { get; set; } = string.Empty;

@@ -1130,3 +1130,5 @@ C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\obj\Debug\net6.0\ref
 C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\obj\Debug\net6.0\ShopManagementMVCConsume.pdb
 C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\obj\Debug\net6.0\ShopManagementMVCConsume.genruntimeconfig.cache
 C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\obj\Debug\net6.0\ref\ShopManagementMVCConsume.dll
+C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\bin\Debug\net6.0\PagedList.dll
+C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\bin\Debug\net6.0\PagedList.Mvc.dll

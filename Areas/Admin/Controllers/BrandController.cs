@@ -31,5 +31,17 @@ namespace ShopManagementMVCConsume.Areas.Admin.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> Insert(Brand brand)
+        {
+            HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Brand", brand);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Get", "Brand");
+            }
+
+            return View();
+        }
     }
 }

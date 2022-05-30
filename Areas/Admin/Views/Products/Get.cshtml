@@ -5,17 +5,16 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Get</h1>
+<h1>Quản lý sản phẩm</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Insert">Create New</a>
 </p>
 
 <table class="table">
     <thead>
         <tr>
             <th>@Html.DisplayName("Id")</th>
-            <th>@Html.DisplayName("StoreId")</th>
             <th>@Html.DisplayName("ProductName")</th>
             <th>@Html.DisplayName("ProductDescription")</th>
             <th>@Html.DisplayName("BuyPrice")</th>
@@ -30,13 +29,16 @@
         {
             <tr>
                 <td>@row.Id</td>
-                <td>@row.StoreId</td>
                 <td>@row.ProductName</td>
                 <td>@row.ProductDescription</td>
                 <td>@row.BuyPrice</td>
                 <td>@row.SellPrice</td>
                 <td>@row.Quantity</td>
                 <td>@row.ImageFile</td>
+                 <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
             </tr>
         }
     </tbody>
