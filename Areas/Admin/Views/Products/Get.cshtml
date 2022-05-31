@@ -5,41 +5,134 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Quản lý sản phẩm</h1>
+<h1>Get</h1>
 
 <p>
     <a asp-action="Insert">Create New</a>
 </p>
-
 <table class="table">
     <thead>
         <tr>
-            <th>@Html.DisplayName("Id")</th>
-            <th>@Html.DisplayName("ProductName")</th>
-            <th>@Html.DisplayName("ProductDescription")</th>
-            <th>@Html.DisplayName("BuyPrice")</th>
-            <th>@Html.DisplayName("SellPrice")</th>
-            <th>@Html.DisplayName("Quantity")</th>
-            <th>@Html.DisplayName("ImageFile")</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageFile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weather)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainMaterial)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var row in Model)
-        {
-            <tr>
-                <td>@row.Id</td>
-                <td>@row.ProductName</td>
-                <td>@row.ProductDescription</td>
-                <td>@row.BuyPrice</td>
-                <td>@row.SellPrice</td>
-                <td>@row.Quantity</td>
-                <td>@row.ImageFile</td>
-                 <td>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageFile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weather)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainMaterial)
+            </td>
+            <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
-            </tr>
-        }
+        </tr>
+}
     </tbody>
 </table>

@@ -15,22 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Areas/Admin/Views/Brand/Get.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcR2V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Areas/Admin/Views/Brand/Insert.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcSW5zZXJ0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Areas/Admin/Views/Category/Get.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcR2V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Areas/Admin/Views/Category/Insert.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5zZXJ0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Areas/Admin/Views/DetailedReceipt/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGV0YWlsZWRSZWNlaXB0XEdldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

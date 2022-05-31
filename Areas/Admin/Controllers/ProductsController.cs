@@ -36,6 +36,7 @@ namespace Shoppppp.Areas.Admin.Controllers
         public async Task<IActionResult> Insert(Product product)
         {
             HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Product", product);
+            
 
             if (response.IsSuccessStatusCode)
             {
@@ -44,5 +45,6 @@ namespace Shoppppp.Areas.Admin.Controllers
 
             return View();
         }
+      
     }
 }

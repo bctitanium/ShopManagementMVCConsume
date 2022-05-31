@@ -5,25 +5,23 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Thêm sản phẩm</h1>
+<h1>Insert</h1>
 
-<h4>Sản phẩm</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Insert">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                @*<label asp-for="Id" class="control-label"></label>*@
-                <input asp-for="Id" class="form-control" value="1" type="hidden"/>
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
                 <span asp-validation-for="Id" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @*<label asp-for="StoreId" class="control-label"></label>*@
-                <input asp-for="StoreId" class="form-control" value="1" type="hidden"/>
+                <label asp-for="StoreId" class="control-label"></label>
+                <input asp-for="StoreId" class="form-control" />
                 <span asp-validation-for="StoreId" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="ProductName" class="control-label"></label>
                 <input asp-for="ProductName" class="form-control" />
@@ -53,6 +51,56 @@
                 <label asp-for="ImageFile" class="control-label"></label>
                 <input asp-for="ImageFile" class="form-control" />
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrandName" class="control-label"></label>
+                <input asp-for="BrandName" class="form-control" />
+                <span asp-validation-for="BrandName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryCode" class="control-label"></label>
+                <input asp-for="CountryCode" class="form-control" />
+                <span asp-validation-for="CountryCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryName" class="control-label"></label>
+                <input asp-for="CategoryName" class="form-control" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryDescription" class="control-label"></label>
+                <input asp-for="CategoryDescription" class="form-control" />
+                <span asp-validation-for="CategoryDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SizeCode" class="control-label"></label>
+                <input asp-for="SizeCode" class="form-control" />
+                <span asp-validation-for="SizeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SizeValue" class="control-label"></label>
+                <input asp-for="SizeValue" class="form-control" />
+                <span asp-validation-for="SizeValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Season" class="control-label"></label>
+                <input asp-for="Season" class="form-control" />
+                <span asp-validation-for="Season" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weather" class="control-label"></label>
+                <input asp-for="Weather" class="form-control" />
+                <span asp-validation-for="Weather" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainMaterial" class="control-label"></label>
+                <input asp-for="MainMaterial" class="form-control" />
+                <span asp-validation-for="MainMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

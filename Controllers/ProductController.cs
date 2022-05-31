@@ -1,14 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ShopManagementMVCConsume.Models;
-using PagedList;
+using X.PagedList;
 
 namespace ShopManagementMVCConsume.Controllers
 {
     public class ProductController : Controller
     {
-       
-        public async Task<IActionResult> Get(int? page, int? pagesize)
+        public async Task<IActionResult> Get(int? page)
         {
             HttpResponseMessage response = await GloblaVariables.GetResponseAsync("Product");
 
@@ -19,27 +18,32 @@ namespace ShopManagementMVCConsume.Controllers
                 string result = response.Content.ReadAsStringAsync().Result;
                 products = JsonConvert.DeserializeObject<IEnumerable<Product>>(result);
             }
-          
             ViewData.Model = products;
-
-            if (page == null)
-            {
-                page = 1;
-            }
-            if (pagesize == null)
-            {
-                pagesize = 10;
-            }
-
-            var product = products.ToList();
-
-            return View(product.ToPagedList((int)page, (int)pagesize));
+            var pageNumber = page ?? 1;
+            ViewBag.products = products.ToList().ToPagedList(pageNumber, 1);
+            return View();
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
+            HttpResponseMessage response = await GloblaVariables.GetResponseAsync("Product");
 
-            return View();
+            IEnumerable<Product> products = new List<Product>();
+
+            if (response.IsSuccessStatusCode)
+            {
+                string result = response.Content.ReadAsStringAsync().Result;
+                products = JsonConvert.DeserializeObject<IEnumerable<Product>>(result);
+            }
+            ViewData.Model = products;
+
+            var data = products.FirstOrDefault(x => x.Id == id);
+
+            if(products == null)
+            {
+                return RedirectToAction("Get");
+            }
+            return View(data);
         }
    
     }

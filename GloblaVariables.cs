@@ -4,11 +4,12 @@ namespace ShopManagementMVCConsume
 {
     public class GloblaVariables
     {
+        private static string baseURL = "https://khvshopapi.azurewebsites.net/api";
         public static async Task<HttpResponseMessage> GetResponseAsync(string str)
         {
             HttpClient Client = new HttpClient();
 
-            Client.BaseAddress = new Uri("https://localhost:44355/api/");
+            Client.BaseAddress = new Uri(baseURL);
             Client.DefaultRequestHeaders.Accept.Clear();
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -21,7 +22,7 @@ namespace ShopManagementMVCConsume
         {
             HttpClient Client = new HttpClient();
 
-            Client.BaseAddress = new Uri("https://localhost:44355/api/");
+            Client.BaseAddress = new Uri(baseURL);
             Client.DefaultRequestHeaders.Accept.Clear();
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
