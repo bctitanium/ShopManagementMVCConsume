@@ -35,6 +35,7 @@ namespace ShopManagementMVCConsume.Controllers
                 string result = response.Content.ReadAsStringAsync().Result;
                 products = JsonConvert.DeserializeObject<IEnumerable<Product>>(result);
             }
+
             ViewData.Model = products;
 
             var data = products.FirstOrDefault(x => x.Id == id);
@@ -43,8 +44,8 @@ namespace ShopManagementMVCConsume.Controllers
             {
                 return RedirectToAction("Get");
             }
+
             return View(data);
         }
-   
     }
 }

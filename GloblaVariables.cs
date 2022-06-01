@@ -4,7 +4,7 @@ namespace ShopManagementMVCConsume
 {
     public class GloblaVariables
     {
-        private static string baseURL = "https://khvshopapi.azurewebsites.net/api";
+        private static string baseURL = "https://khvshopapi.azurewebsites.net/api/";
         public static async Task<HttpResponseMessage> GetResponseAsync(string str)
         {
             HttpClient Client = new HttpClient();

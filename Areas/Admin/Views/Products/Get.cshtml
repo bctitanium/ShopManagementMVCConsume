@@ -5,9 +5,9 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Get</h1>
+@*<h1>Get</h1>*@
 
-<p>
+@*<p>
     <a asp-action="Insert">Create New</a>
 </p>
 <table class="table">
@@ -128,11 +128,104 @@
                 @Html.DisplayFor(modelItem => item.MainMaterial)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }
     </tbody>
-</table>
+</table>*@
+<div class="page-header">
+                        <div class="header-sub-title">
+                            <nav class="breadcrumb breadcrumb-dash">
+                                <a asp-area="Admin" asp-controller ="Products" asp-action="Get"><i class="anticon anticon-home m-r-5"></i>Home</a>
+                                <span class="breadcrumb-item active">Danh sach sản phẩm</span>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row m-b-30">
+                                <div class="col-lg-8">
+                                    <div class="d-md-flex">
+                                        <div class="m-b-10 m-r-15">
+                                            <select class="custom-select" style="min-width: 180px;">
+                                                <option selected>Catergory</option>
+                                                <option value="all">All</option>
+                                                <option value="homeDeco">Home Decoration</option>
+                                                <option value="eletronic">Eletronic</option>
+                                                <option value="jewellery">Jewellery</option>
+                                            </select>
+                                        </div>
+                                        <div class="m-b-10">
+                                            <select class="custom-select" style="min-width: 180px;">
+                                                <option selected>Status</option>
+                                                <option value="all">All</option>
+                                                <option value="inStock">In Stock </option>
+                                                <option value="outOfStock">Out of Stock</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <button class="btn btn-primary">
+                                        <i class="anticon anticon-plus-circle m-r-5"></i>
+                                        <a asp-action="Insert"></a>
+                                        <span>Add Product</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover e-commerce-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Dang mục</th>
+                                            <th>Giá nhập</th>
+                                            <th>Giáp bán</th>
+                                            <th>Kick thước</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if(Model != null)
+                                        {
+                                            foreach(var item in Model)
+                                            {
+                                           <tr>
+                                            
+                                            <td>
+                                                @item.Id
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="img-fluid rounded" src="~/assets/Anh/Anh/@item.ImageFile" style="max-width: 60px" alt="">
+                                                    <h6 class="m-b-0 m-l-10">@item.ProductName</h6>
+                                                </div>
+                                            </td>
+                                            <td>@item.CategoryName</td>
+                                            <td>@item.BuyPrice</td>
+                                            <td>@item.SellPrice</td>
+                                            <td>@item.Gender</td>
+                                            <td>@item.SizeCode</td>
+
+                                            <td class="text-right">
+                                                <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
+                                                    <i class="anticon anticon-edit">@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })</i>
+                                                </button>
+                                                <button class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete">@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })</i>
+                                                </button>
+                                            </td>
+                                        </tr>  
+                                            }
+                                                
+                                        }
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
