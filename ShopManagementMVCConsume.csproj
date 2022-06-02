@@ -352,6 +352,10 @@
     <None Include="wwwroot\assets\vinh\vinh\quan\Quần đùi LEVENTS Essential Shortpants Black.png" />
     <None Include="wwwroot\assets\vinh\vinh\quan\Quần đùi LEVENTS Space Shortpants  Cream.png" />
     <None Include="wwwroot\assets\vinh\vinh\tay.png" />
+    <None Include="wwwroot\Build\Shop.data.br" />
+    <None Include="wwwroot\Build\Shop.framework.js.br" />
+    <None Include="wwwroot\Build\Shop.loader.js" />
+    <None Include="wwwroot\Build\Shop.wasm.br" />
   </ItemGroup>
 
 </Project>
