@@ -27,7 +27,7 @@ namespace ShopManagementMVCConsume.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            return RedirectToAction("Login", "Account");
+            return View();
         }
     }
 }
