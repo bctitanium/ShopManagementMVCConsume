@@ -171,8 +171,7 @@
                                 <div class="col-lg-4 text-right">
                                     <button class="btn btn-primary">
                                         <i class="anticon anticon-plus-circle m-r-5"></i>
-                                        <a asp-action="Insert"></a>
-                                        <span>Add Product</span>
+                                        <a asp-area="Admin" asp-controller ="Products" asp-action="Insert">Add Product</a>
                                     </button>
                                 </div>
                             </div>
@@ -213,10 +212,10 @@
 
                                             <td class="text-right">
                                                 <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-edit">@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })</i>
+                                                    <i class="anticon anticon-edit">@Html.ActionLink("Edit", "Edit", new { id=item.Id })</i>
                                                 </button>
                                                 <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                    <i class="anticon anticon-delete">@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })</i>
+                                                    <i class="anticon anticon-delete">@Html.ActionLink("Delete", "Delete", new { id=item.Id })</i>
                                                 </button>
                                             </td>
                                         </tr>  

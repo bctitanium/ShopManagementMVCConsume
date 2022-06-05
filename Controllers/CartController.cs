@@ -1,5 +1,4 @@
 ﻿//using AspNetCoreHero.ToastNotification.Abstractions;
-//using Microsoft.AspNetCore.Http;
 //using Microsoft.AspNetCore.Mvc;
 //using Newtonsoft.Json;
 //using ShopManagementMVCConsume.Models;
@@ -20,11 +19,11 @@
 //            get
 //            {
 //                var gh = HttpContext.Session.Get<List<Cart>>("GioHang");
-//                if(gh == default(List<Cart>))
+//                if (gh == default(List<Cart>))
 //                {
 //                    gh = new List<Cart>();
 //                }
-//                return gh;    
+//                return gh;
 //            }
 //        }
 
@@ -47,7 +46,7 @@
 //                Cart item = GioHang.SingleOrDefault(p => p.product.Id == productID);
 //                if (item != null)
 //                {
-//                    if(amount.HasValue)
+//                    if (amount.HasValue)
 //                    {
 //                        item.amount = amount.Value;
 //                    }
@@ -141,9 +140,9 @@
 //            {
 //                return Json(new { success = false });
 //            }
-            
+
 //        }
-//        [Route("cart.html", Name ="Cart")]
+//        [Route("cart.html", Name = "Cart")]
 //        public async Task<IActionResult> Index()
 //        {
 //            return View(GioHang);
