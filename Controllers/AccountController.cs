@@ -9,10 +9,16 @@ namespace ShopManagementMVCConsume.Controllers
         public async Task<IActionResult> Login(Login login)
         {
             HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Auth/login", login);
-
-            if (response.IsSuccessStatusCode)
+            string rs = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode && rs.Contains("Staff"))
             {
-                return RedirectToAction("Index", "Home");
+                //return RedirectToAction("Index", "Home");
+                return Redirect("/Admin/Home/Index");
+            }
+
+            if (response.IsSuccessStatusCode && rs.Contains("Customer"))
+            {
+                return RedirectToAction("Get", "Product");
             }
 
             return View();
@@ -20,7 +26,7 @@ namespace ShopManagementMVCConsume.Controllers
 
         public async Task<IActionResult> Register(CreateUserDTO createUserDTO)
         {
-            HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Users", createUserDTO);
+            HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Customer", createUserDTO);
 
             if (response.IsSuccessStatusCode)
             {

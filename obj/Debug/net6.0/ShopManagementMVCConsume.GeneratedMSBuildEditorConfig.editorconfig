@@ -27,10 +27,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Areas/Admin/Views/Home/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Areas/Admin/Views/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -125,10 +121,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Views/DressUp/Dress.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJlc3NVcFxEcmVzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Khang Nguyen/source/repos/ShopManagementMVCConsume/Views/Home/About.cshtml]

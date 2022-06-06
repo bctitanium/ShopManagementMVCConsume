@@ -4,8 +4,9 @@ namespace ShopManagementMVCConsume.ViewModel
 {
     public class Cart
     {
-        public Product? product { get; set; }
-        public int amount { get; set; }
-        public double TotalMonney => amount * product.SellPrice;
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        //public int CustomerId { get; set; }
+        public int Quantity { get; set; }
     }
 }

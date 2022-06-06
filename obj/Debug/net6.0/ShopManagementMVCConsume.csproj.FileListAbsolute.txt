@@ -1133,3 +1133,4 @@ C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\obj\Debug\net6.0\ref
 C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\bin\Debug\net6.0\JetBrains.Annotations.dll
 C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\bin\Debug\net6.0\X.PagedList.dll
 C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+C:\Users\Khang Nguyen\source\repos\ShopManagementMVCConsume\bin\Debug\net6.0\EntityFramework.Toolkit.Core.dll

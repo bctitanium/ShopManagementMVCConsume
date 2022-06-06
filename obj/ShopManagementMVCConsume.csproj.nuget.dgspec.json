@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[1.1.0, )"
             },
+            "EntityFramework.Toolkit.Core": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "IronPython": {
+              "target": "Package",
+              "version": "[2.7.12, )"
+            },
             "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",
               "version": "[5.2.8, )"
@@ -55,6 +63,10 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

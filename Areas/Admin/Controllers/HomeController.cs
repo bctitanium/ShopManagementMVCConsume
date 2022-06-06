@@ -10,17 +10,5 @@ namespace ShopManagementMVCConsume.Areas.Admin.Controllers
         {
             return View();
         }
-
-        public async Task<IActionResult> Login(Login login)
-        {
-            HttpResponseMessage response = await GloblaVariables.PostResponseAsync("Auth/login", login);
-
-            if (response.IsSuccessStatusCode && login.UserName == "admin1")
-            {
-                return RedirectToAction("Index", "Home");
-            }
-
-            return View();
-        }
     }
 }
